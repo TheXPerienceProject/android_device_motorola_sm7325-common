@@ -28,7 +28,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-arrow
+    $(LOCAL_PATH)/overlay-xperience
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -383,6 +383,12 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hotword-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml
+
+#Platform
+TARGET_BOARD_PLATFORM := lahaina
+TARGET_PROVIDES_POWERHAL := true
+TARGET_COMMON_QTI_COMPONENTS := \
+    perf
 
 # Power
 PRODUCT_PACKAGES += \
