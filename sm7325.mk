@@ -442,8 +442,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
-    hardware/google/pixel \
-    packages/modules/Bluetooth/android/app
+    hardware/google/pixel
 
 # Telephony
 PRODUCT_PACKAGES += \
