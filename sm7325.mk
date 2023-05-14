@@ -93,6 +93,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.bluetooth@1.1.vendor \
     android.hardware.soundtrigger@2.3-impl \
     audioadsprpcd \
     audio.bluetooth.default \
@@ -141,6 +142,18 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
+
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
+    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2 \
+    persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false \
+    persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true \
+    persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true \
+    persist.vendor.qcom.bluetooth.enable.swb=true \
+    persist.vendor.qcom.bluetooth.enable.swbpm=true \
+    persist.vendor.qcom.bluetooth.scram.enabled=false \
+    persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -388,6 +401,7 @@ TARGET_BOARD_PLATFORM := lahaina
 TARGET_PROVIDES_POWERHAL := true
 TARGET_PROVIDES_MOTO_POWERHAL := true
 TARGET_COMMON_QTI_COMPONENTS := \
+    bt \
     perf
 
 # Power
