@@ -1,0 +1,1 @@
+allow cgroup cgroup:file getattr;
