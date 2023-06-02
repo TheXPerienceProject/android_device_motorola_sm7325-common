@@ -1,6 +1,7 @@
 #
 # Copyright (C) 2021-2023 Paranoid Android
 #           (C) 2023 ArrowOS
+#           (C) 2023 The XPerience Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -19,6 +20,10 @@ on property:sys.boot_completed=1
     # Runtime fs tuning
     write /dev/sys/fs/by-name/userdata/data_io_flag 8
     write /dev/sys/fs/by-name/userdata/node_io_flag 8
+
+   # optimize for some games
+   write /proc/sys/kernel/sched_lib_name "com.miHoYo., com.activision., UnityMain, libunity.so, libil2cpp.so, libfb.so"
+   write /proc/sys/kernel/sched_lib_mask_force 240
 
 on property:vendor.post_boot.parsed=1
     # Setup runtime cpusets
