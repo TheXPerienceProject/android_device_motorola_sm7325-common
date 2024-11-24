@@ -66,6 +66,9 @@
 # IFAA
 /(vendor|system/vendor)/bin/hw/vendor\.zui\.hardware\.ifaa@1\.0-service                 u:object_r:hal_ifaa_default_exec:s0
 
+# Init
+/(vendor|system/vendor)/bin/init\.moto_sm8350\.sh u:object_r:vendor_qti_init_shell_exec:s0
+
 # Lights
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.berlna                                         u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.xpeng                                          u:object_r:hal_light_default_exec:s0
