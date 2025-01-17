@@ -148,6 +148,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor # Needed by CNE app
 
+# FM
+PRODUCT_PACKAGES += \
+vendor.qti.hardware.fm@1.0 \
+vendor.qti.hardware.fm@1.0.vendor
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-impl-qti \
@@ -205,7 +210,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENABLE_UFFD_GC := false
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service.motorola_lahaina
 
 # Media
@@ -313,6 +318,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hotword-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml
 
+# Platform
+TARGET_BOARD_PLATFORM := lahaina
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
@@ -354,9 +362,6 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils-prd \
     qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
     telephony-ext
 
 PRODUCT_COPY_FILES += \

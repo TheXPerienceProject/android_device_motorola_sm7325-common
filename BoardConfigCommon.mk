@@ -8,6 +8,10 @@ BOARD_VENDOR := motorola
 
 COMMON_PATH := device/motorola/sm7325-common
 
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -112,8 +116,8 @@ LOC_HIDL_VERSION := 4.2
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(COMMON_PATH)/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/device_framework_matrix.xml \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    $(COMMON_PATH)/device_framework_matrix_los.xml \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 ifeq ($(TARGET_HAS_SNXXX_NFC),)
@@ -124,7 +128,7 @@ endif
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/xperience/config/BoardConfigReservedSize.mk
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 30720000
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
