@@ -89,6 +89,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.3-impl \
+    android.media.audio.common.types-V3-cpp \
+    android.media.audio.common.types-V4-cpp \
     audioadsprpcd \
     audio.bluetooth.default \
     audio.primary.lahaina \
