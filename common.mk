@@ -306,10 +306,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     rfs_mdm_mpss_readonly_vendor_fsg_symlink
 
-# RFS MSM MPSS symlinks
-PRODUCT_PACKAGES += \
-    rfs_msm_mpss_readonly_vendor_fsg_symlink
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal
