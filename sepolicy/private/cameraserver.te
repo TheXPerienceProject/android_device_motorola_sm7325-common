@@ -1,0 +1,2 @@
+type camera_prop, property_type;
+get_prop(cameraserver, camera_prop)
