@@ -300,6 +300,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
+# Perf
+PRODUCT_PACKAGES += \
+    libtflite \
+    vendor.qti.hardware.perf@2.2 \
+    vendor.qti.hardware.perf@2.2.vendor \
+
 # RFS MDM MPSS symlinks
 PRODUCT_PACKAGES += \
     rfs_mdm_mpss_readonly_vendor_fsg_symlink
@@ -317,6 +323,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 TARGET_BOARD_PLATFORM := lahaina
+
+PRODUCT_PACKAGES += \
+    perf-legacy
+
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -342,7 +352,9 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal-service.qti
+    android.hardware.thermal-service.qti \
+    android.hardware.thermal@2.0 \
+    android.hardware.thermal@2.0.vendor
 
 # Update engine
 PRODUCT_PACKAGES += \
