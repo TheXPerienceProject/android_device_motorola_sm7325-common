@@ -128,7 +128,6 @@ function configure_memory_parameters() {
 
 	configure_zram_parameters
 	configure_read_ahead_kb_values
-	echo 60 > /proc/sys/vm/swappiness
 }
 
 rev=`cat /sys/devices/soc0/revision`
