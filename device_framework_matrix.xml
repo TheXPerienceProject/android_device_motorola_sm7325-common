@@ -164,4 +164,6 @@
         <version>2.0</version>
         <interface>
             <name>IIop</name>
+         </interface>
+    </hal>
 </compatibility-matrix>
